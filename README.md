@@ -52,5 +52,5 @@ Adapted existing UWB-based leader–follower control code and evaluated vehicle 
 ## My Contributions
 
 - Analyzed the HST drive mechanism and electrical control signals, and measured actuation torque to select an appropriate actuation point.
-- Designed and mounted the actuator linkage, and designed and assembled the STM32-based main control PCB.
+- Developed the lever-actuation mechanism and designed and assembled the STM32-based main control PCB.
 - Adapted existing leader–follower control code and evaluated tracking behavior in ROS 2/Gazebo.
