@@ -1,32 +1,45 @@
+
 # Agricultural Vehicle Leader–Follower Control System
 
 ## Overview
-This project develops a leader–follower control system for an agricultural vehicle in collaboration with Duru Machinery. The project combines STM32-based control hardware with UWB-based relative pose estimation and ROS2/Gazebo-based follower control.
 
-### Agricultural Vehicle
+This project explores the automation of a hydraulically driven agricultural vehicle for leader–follower operation in collaboration with Duru Machinery. The work includes mechanical system analysis, STM32-based control hardware design, and ROS 2/Gazebo simulation.
 
-<img src="media/agricultural_vehicle.jpg" alt="Agricultural vehicle used in the project" width="600">
+## Agricultural Vehicle
 
-## My Role
-- Designed the STM32-based main control PCB interfacing sensors, communication modules, and actuators
-- Implemented UWB-based relative pose estimation in ROS2
-- Developed leader–follower tracking control for the follower vehicle
-- Evaluated tracking behavior in ROS2/Gazebo across turning scenarios
+<p align="center">
+  <img src="media/agricultural_vehicle_front.png" alt="Front view of agricultural vehicle" width="48%">
+  <img src="media/agricultural_vehicle.jpg" alt="Rear view of agricultural vehicle" width="48%">
+</p>
 
-## System Architecture
-- STM32-based main control hardware
-- UWB-based relative positioning
-- ROS2 communication and control
-- Leader–follower tracking controller
-- Gazebo simulation environment
+## Mechanical System Analysis
 
-### STM32 Main Control PCB (3D Render)
+Analyzed the hydrostatic transmission (HST) and mechanical linkage connecting the travel lever to the transmission control mechanism.
+
+<img src="media/hst.png" alt="HST drive mechanism" width="550">
+
+- Measured actuation torque across the full travel-lever range and at the transmission-side control point.
+- Compared potential actuator locations based on mechanical characteristics and installation constraints.
+- Selected lever-side actuation to preserve the original mechanical linkage and enable a detachable automation system.
+
+## STM32 Control Hardware
+
+Designed and assembled a four-layer STM32-based control PCB based on the vehicle's automation requirements.
+
+- RS-485 communication interfaces
+- Relay outputs for actuator control
+- Encoder interface for feedback
 
 <img src="media/stm32_pcb.png" alt="STM32 main control PCB 3D render" width="600">
 
-## Validation
-The leader–follower control algorithm was validated in simulation using ROS2/Gazebo. Hardware development and control-algorithm validation were conducted as separate parts of the project.
+## ROS 2 / Gazebo Simulation
 
-### ROS2/Gazebo Simulation
+Adapted existing UWB-based leader–follower control code and evaluated vehicle tracking behavior across simulated turning scenarios in ROS 2/Gazebo.
 
-<img src="media/gazebo_simulation.png" alt="Leader-follower simulation environment in Gazebo" width="600">
+<img src="media/gazebo_simulation.png" alt="Leader-follower simulation in Gazebo" width="600">
+
+## My Contributions
+
+- Analyzed the hydraulic drive mechanism and measured actuation torque to determine suitable automation points.
+- Defined control hardware requirements and designed and assembled the STM32-based main control PCB.
+- Adapted leader–follower control code and evaluated tracking behavior in ROS 2/Gazebo.
