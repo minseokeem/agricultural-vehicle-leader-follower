@@ -26,8 +26,9 @@ Analyzed the hydrostatic transmission (HST), the mechanical linkage connecting t
 
 Selected lever-side actuation to preserve the original mechanical linkage and support removable installation.
 
-- Selected a linear actuator and designed a linkage assembly based on the measured actuation requirements.
-- Mounted the actuator to the travel lever and verified lever movement with the engine off.
+- Estimated actuator thrust requirements based on the measured peak lever force and linkage geometry.
+- Selected a linear actuator and designed a linkage assembly to meet the actuation requirements.
+- Installed the actuator linkage and verified actuator-driven lever movement with the engine off.
 
 <img src="media/lever_actuator.jpg" alt="Linear actuator and linkage mounted to the travel lever" width="600">
 
