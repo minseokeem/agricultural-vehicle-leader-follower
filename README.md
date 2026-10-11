@@ -27,8 +27,9 @@ Analyzed the hydrostatic transmission (HST) and mechanical linkage connecting th
 Designed and assembled a four-layer STM32-based control PCB to meet the identified automation requirements.
 
 - RS-485 communication interfaces
-- Relay outputs for actuator control
-- Encoder interface for feedback
+- Relay-based steering control
+- Motor driver interface for actuator control
+- Encoder interface for position feedback
 
 <img src="media/stm32_pcb.png" alt="STM32 main control PCB 3D render" width="600">
 
