@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project focuses on the development of a leader–follower control system for a hydraulically driven agricultural vehicle in collaboration with Duru Machinery. The work includes mechanical system analysis, STM32-based control hardware design, and ROS 2/Gazebo simulation.
+This project focuses on developing a leader–follower control system for a hydraulically driven agricultural vehicle in collaboration with Duru Machinery. The work includes mechanical and electrical system analysis, lever-actuation mechanism design, STM32-based control hardware, and ROS 2/Gazebo simulation.
 
 ## Agricultural Vehicle
 
@@ -12,15 +12,24 @@ This project focuses on the development of a leader–follower control system fo
   <img src="media/agricultural_vehicle.jpg" alt="Rear view of agricultural vehicle" width="48%">
 </p>
 
-## Mechanical System Analysis
+## Mechanical & Electrical System Analysis
 
-Analyzed the hydrostatic transmission (HST) and mechanical linkage connecting the travel lever to the HST control input.
+Analyzed the hydrostatic transmission (HST), the mechanical linkage connecting the travel lever to the HST control input, and the vehicle's existing electrical control signals.
 
 <img src="media/hst.png" alt="HST drive mechanism" width="550">
 
-- Measured actuation torque across the full travel-lever range and at the transmission-side control point.
-- Compared potential actuator locations based on mechanical characteristics and installation constraints.
-- Selected lever-side actuation to preserve the original mechanical linkage and enable a removable actuator assembly.
+- Measured actuation torque at the travel lever and HST-side control input, and examined forward/reverse lever operation.
+- Characterized voltage levels and signal states associated with engine starting and steering.
+- Compared candidate actuation points while considering mechanical characteristics and installation constraints.
+
+## Actuator & Linkage Design
+
+Selected lever-side actuation to preserve the original mechanical linkage and support removable installation.
+
+- Selected a linear actuator and designed a linkage assembly based on the measured actuation requirements.
+- Mounted the actuator to the travel lever and verified lever movement with the engine off.
+
+<img src="media/lever_actuator.jpg" alt="Linear actuator and linkage mounted to the travel lever" width="600">
 
 ## STM32 Control Hardware
 
@@ -28,8 +37,8 @@ Designed and assembled a four-layer STM32-based control PCB to meet the identifi
 
 - RS-485 communication interfaces
 - Relay-based steering control
-- Motor driver interface for actuator control
-- Encoder interface for position feedback
+- Motor driver interface for travel-lever actuator control
+- Encoder interface for actuator position feedback
 
 <img src="media/stm32_pcb.png" alt="STM32 main control PCB 3D render" width="600">
 
@@ -41,6 +50,6 @@ Adapted existing UWB-based leader–follower control code and evaluated vehicle 
 
 ## My Contributions
 
-- Analyzed the hydraulic drive mechanism and measured actuation torque to identify an appropriate actuation point.
-- Defined control hardware requirements and designed and assembled the STM32-based main control PCB.
-- Adapted leader–follower control code and evaluated tracking behavior in ROS 2/Gazebo.
+- Analyzed the HST drive mechanism and electrical control signals, and measured actuation torque to select an appropriate actuation point.
+- Designed and mounted the actuator linkage, and designed and assembled the STM32-based main control PCB.
+- Adapted existing leader–follower control code and evaluated tracking behavior in ROS 2/Gazebo.
