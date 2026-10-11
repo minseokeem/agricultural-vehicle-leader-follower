@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project explores the automation of a hydraulically driven agricultural vehicle for leader–follower operation in collaboration with Duru Machinery. The work includes mechanical system analysis, STM32-based control hardware design, and ROS 2/Gazebo simulation.
+This project focuses on the development of a leader–follower control system for a hydraulically driven agricultural vehicle in collaboration with Duru Machinery. The work includes mechanical system analysis, STM32-based control hardware design, and ROS 2/Gazebo simulation.
 
 ## Agricultural Vehicle
 
@@ -14,17 +14,17 @@ This project explores the automation of a hydraulically driven agricultural vehi
 
 ## Mechanical System Analysis
 
-Analyzed the hydrostatic transmission (HST) and mechanical linkage connecting the travel lever to the transmission control mechanism.
+Analyzed the hydrostatic transmission (HST) and mechanical linkage connecting the travel lever to the HST control input.
 
 <img src="media/hst.png" alt="HST drive mechanism" width="550">
 
 - Measured actuation torque across the full travel-lever range and at the transmission-side control point.
 - Compared potential actuator locations based on mechanical characteristics and installation constraints.
-- Selected lever-side actuation to preserve the original mechanical linkage and enable a detachable automation system.
+- Selected lever-side actuation to preserve the original mechanical linkage and enable a removable actuator assembly.
 
 ## STM32 Control Hardware
 
-Designed and assembled a four-layer STM32-based control PCB based on the vehicle's automation requirements.
+Designed and assembled a four-layer STM32-based control PCB to meet the identified automation requirements.
 
 - RS-485 communication interfaces
 - Relay outputs for actuator control
@@ -40,6 +40,6 @@ Adapted existing UWB-based leader–follower control code and evaluated vehicle 
 
 ## My Contributions
 
-- Analyzed the hydraulic drive mechanism and measured actuation torque to determine suitable automation points.
+- Analyzed the hydraulic drive mechanism and measured actuation torque to identify an appropriate actuation point.
 - Defined control hardware requirements and designed and assembled the STM32-based main control PCB.
 - Adapted leader–follower control code and evaluated tracking behavior in ROS 2/Gazebo.
